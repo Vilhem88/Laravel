@@ -1,0 +1,25 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Role;
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+class RoleSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $role1 = new Role();
+        $role1->role = 'Admin';
+        $role1->save();
+    
+        $role2 = new Role();
+        $role2->role = 'Guest';
+        $role2->save();
+    
+    }
+}
